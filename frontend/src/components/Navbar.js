@@ -8,16 +8,15 @@ import FormPet from "./FormPet";
 
 export default function Navbar() {
 
-    // const redirectToFormPet = () => {
-    //     //Redirect to python page
-    //     window.location.href="/formpet"
-    // };
 
     const [click, setClick] = useState(false);
     const redirectToFormPet = () => setClick(false);
 
     const [click1, setClick1] = useState(false);
     const redirectToAllCategory = () => setClick1(false);
+
+    const [click2, setClick2] = useState(false);
+    const redirectToAdoptedInfo = () => setClick2(false);
 
     return (
         <>
@@ -37,6 +36,21 @@ export default function Navbar() {
                     </div>
                     <div className="lg:flex flex-grow items-center" id="example-navbar-warning">
                         <ul className="flex flex-col lg:flex-row list-none ml-auto">
+                            <li className="nav-item">
+                                <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
+
+                                    <button
+                                        className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                                        <Link
+                                            to='/AdoptedInfo'
+                                            className='nav-links'
+                                            onClick={redirectToAdoptedInfo}
+                                        >
+                                            Past Adoptions
+                                        </Link>
+                                    </button>
+                                </a>
+                            </li>
                             <li className="nav-item">
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
 

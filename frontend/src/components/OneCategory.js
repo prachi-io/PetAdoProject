@@ -3,11 +3,20 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function OneCategory() {
 
-    const [click1, setClick1] = useState(false);
-    const redirectToFormAdopt = () => setClick1(false);
+
+    const navigate = useNavigate();
+    const createPost = (u) => {
+        navigate('/FormAdopt',
+            {
+                state: {
+                    petName: u,
+                }
+            });
+    }
 
     const [userData,setUserData] = useState("")
 
@@ -42,10 +51,10 @@ export default function OneCategory() {
 
     return (
         <>
-            <div>{reqname}</div>
+            <h1>{reqname}</h1>
             {userData && userData.map((user) => (
 
-                <div className="w-full rounded-lg shadow-md lg:max-w-sm">
+                <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto">
                     <div className="p-4">
                         <h4 className="text-xl font-semibold tracking-tight text-blue-600">
                             {user.name}
@@ -57,13 +66,9 @@ export default function OneCategory() {
                             {user.color}
                         </p>
                         <button className="px-4 py-2 text-sm text-blue-100 bg-blue-500 rounded shadow">
-                            <Link
-                                to='/FormAdopt'
-                                className='nav-links'
-                                onClick={redirectToFormAdopt}
-                            >
-                                Adopt
-                            </Link>
+                            <span onClick={() => { createPost(user._id) }}>
+                                    Adopt
+                            </span>
                         </button>
                     </div>
                 </div>
