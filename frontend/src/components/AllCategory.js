@@ -24,7 +24,7 @@ export default function AllCategory() {
         navigate('/OneCategory',
             {
                 state: {
-                    post_id: u,
+                    Cname: u,
                 }
             });
     }
@@ -34,7 +34,7 @@ export default function AllCategory() {
         <> <NavCat/>
             {userData && userData.map((user) => (
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-auto m-20">
-                    <span onClick={() => { createPost(user._id) }}>
+                    <span onClick={() => { createPost(user.name) }}>
                         {user.name}
                         <br/>
                         {user._id}
