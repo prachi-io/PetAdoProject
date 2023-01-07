@@ -7,16 +7,54 @@ export default function FormPet() {
         setImages([...e.target.files]);
     }
 
+    const [name, setName] = useState('');
+    const [age, setAge] = useState(0);
+    const [color, setColor] = useState('');
+    const [description, setDescription] = useState('');
+    const [breed, setBreed] = useState('');
+    const [imageLabel, setImageLabel] = useState('');
+    const [category, setCategory] = useState('');
+    const [owner, setOwner] = useState('');
+    const [ownerEmail, setOwnerEmail] = useState('');
+
+    const submitData = () => {
+        const data = {
+            name,
+            age,
+            color,
+            description,
+            breed,
+            imageLabel,
+            category,
+            owner,
+            ownerEmail,
+            images
+        }
+        console.log(data)
+        setName("")
+        setAge(0)
+        setColor("")
+        setDescription("")
+        setBreed("")
+        setImageLabel("")
+        setCategory("")
+        setOwner("")
+        setOwnerEmail("")
+        setImages([])
+    }
+
+
+
     return(
         <div className="w-full max-w-xs m-auto">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitData}>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                         Name
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="name" type="text" placeholder="name"/>
+                        id="name" type="text" placeholder="name" value={name} onChange={(event)=> setName(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -24,7 +62,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="age" type="number" placeholder="age"/>
+                        id="age" type="number" placeholder="age" value={age} onChange={(event)=> setAge(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -32,7 +70,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="username" type="text" placeholder="Username"/>
+                        id="color" type="text" placeholder="Color" value={color} onChange={(event)=> setColor(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -40,7 +78,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="description" type="text" placeholder="Description"/>
+                        id="description" type="text" placeholder="Description" value={description} onChange={(event)=> setDescription(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -48,7 +86,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="breed" type="text" placeholder="Breed"/>
+                        id="breed" type="text" placeholder="Breed" value={breed} onChange={(event)=> setBreed(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -56,7 +94,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="imageLabel" type="text" placeholder="Image Label"/>
+                        id="imageLabel" type="text" placeholder="Image Label" value={imageLabel} onChange={(event)=> setImageLabel(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -64,7 +102,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="category" type="text" placeholder="category"/>
+                        id="category" type="text" placeholder="category" value={category} onChange={(event)=> setCategory(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -72,7 +110,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="owner" type="text" placeholder="Owner"/>
+                        id="owner" type="text" placeholder="Owner" value={owner} onChange={(event)=> setOwner(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -80,7 +118,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="ownerEmail" type="text" placeholder="Owner Email"/>
+                        id="ownerEmail" type="text" placeholder="Owner Email" value={ownerEmail} onChange={(event)=> setOwnerEmail(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -92,7 +130,7 @@ export default function FormPet() {
                 <div className="flex items-center justify-between">
                     <button
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        type="button">
+                        type="button" onClick={submitData}>
                         Add
                     </button>
                 </div>
