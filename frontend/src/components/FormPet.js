@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from "axios";
 export default function FormPet() {
 
     const [images, setImages] = useState([]);
@@ -12,12 +13,13 @@ export default function FormPet() {
     const [color, setColor] = useState('');
     const [description, setDescription] = useState('');
     const [breed, setBreed] = useState('');
+    const [category,setCategory] = useState('')
     const [imageLabel, setImageLabel] = useState('');
-    const [category, setCategory] = useState('');
     const [owner, setOwner] = useState('');
     const [ownerEmail, setOwnerEmail] = useState('');
 
-    const submitData = () => {
+    const submitData = async () => {
+
         const data = {
             name,
             age,
@@ -25,7 +27,6 @@ export default function FormPet() {
             description,
             breed,
             imageLabel,
-            category,
             owner,
             ownerEmail,
             images
@@ -37,10 +38,10 @@ export default function FormPet() {
         setDescription("")
         setBreed("")
         setImageLabel("")
-        setCategory("")
         setOwner("")
         setOwnerEmail("")
         setImages([])
+        const res = await axios.post("http://localhost:4000/api/pet/create" , data)
     }
 
 
@@ -102,7 +103,7 @@ export default function FormPet() {
                     </label>
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="category" type="text" placeholder="category" value={category} onChange={(event)=> setCategory(event.target.value)}/>
+                        id="category" type="text" placeholder="Category" value={category} onChange={(event)=> setCategory(event.target.value)}/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">

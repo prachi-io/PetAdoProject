@@ -13,8 +13,11 @@ export default function Navbar() {
     //     window.location.href="/formpet"
     // };
 
-    // const [click, setClick] = useState(false);
-    // const redirectToFormPet = () => setClick(false);
+    const [click, setClick] = useState(false);
+    const redirectToFormPet = () => setClick(false);
+
+    const [click1, setClick1] = useState(false);
+    const redirectToAllCategory = () => setClick1(false);
 
     return (
         <>
@@ -39,14 +42,13 @@ export default function Navbar() {
 
                                     <button
                                         className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                        {/*<Link*/}
-                                        {/*    to='/formpet'*/}
-                                        {/*    className='nav-links'*/}
-                                        {/*    onClick={redirectToFormPet}*/}
-                                        {/*>*/}
-                                        {/*    Add a pet*/}
-                                        {/*</Link>*/}
-                                        add a pet
+                                        <Link
+                                            to='/FormPet'
+                                            className='nav-links'
+                                            onClick={redirectToFormPet}
+                                        >
+                                            Add a pet
+                                        </Link>
                                     </button>
                                 </a>
                             </li>
@@ -54,7 +56,13 @@ export default function Navbar() {
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
                                     <button
                                         className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                        Adopt a pet
+                                        <Link
+                                            to='/AllCategory'
+                                            className='nav-links'
+                                            onClick={redirectToAllCategory}
+                                        >
+                                            Adopt a pet
+                                        </Link>
                                     </button>
                                 </a>
                             </li>

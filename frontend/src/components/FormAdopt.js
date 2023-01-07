@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from "axios";
 export default function FormAdopt() {
 
     const [firstName, setFirstName] = useState('');
@@ -7,13 +8,13 @@ export default function FormAdopt() {
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
 
-    const submitData = () => {
+    const submitData = async () => {
         const data = {
             firstName,
             lastName,
             email,
             address,
-            phone
+            phone,
         }
         console.log(data)
         setFirstName("")
@@ -21,6 +22,7 @@ export default function FormAdopt() {
         setEmail("")
         setAddress("")
         setPhone("")
+        const res = await axios.post("http://localhost:4000/api/adoption/create" , data)
     }
 
 

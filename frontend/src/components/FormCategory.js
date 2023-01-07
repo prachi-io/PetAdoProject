@@ -1,14 +1,18 @@
 import React, {useState} from "react";
+import axios from "axios";
+
+
 export default function FormCategory() {
 
     const [name, setName] = useState('');
 
-    const submitData = () => {
+    const submitData = async () => {
         const data = {
             name
         }
         console.log(data)
         setName("")
+        const res = await axios.post("http://localhost:4000/api/category/create" , data)
     }
 
     return(
