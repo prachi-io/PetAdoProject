@@ -1,8 +1,19 @@
 import './App.css';
+import Navbar from "./components/Navbar";
+import ImagePart from "./components/ImagePart";
+import Footer from "./components/Footer"
 
 function App() {
   return (
-    <h1>Hello i am from app</h1>
+    <>
+      <Navbar/>
+      <ImagePart/>
+      {/*<Footer/>*/}
+      {/*  <Routes>*/}
+      {/*      <Route path="/python" element={<Python />} />*/}
+      {/*      <Route path="/" element={<Home />} />*/}
+      {/*  </Routes>*/}
+    </>
   );
 }
 
