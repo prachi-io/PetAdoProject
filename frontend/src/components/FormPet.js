@@ -3,11 +3,6 @@ import axios from "axios";
 export default function FormPet() {
 
     const [images, setImages] = useState([]);
-
-    const onImageChange = (e) => {
-        setImages([...e.target.files]);
-    }
-
     const [name, setName] = useState('');
     const [age, setAge] = useState(0);
     const [color, setColor] = useState('');
@@ -19,6 +14,9 @@ export default function FormPet() {
     const [ownerEmail, setOwnerEmail] = useState('');
 
     const submitData = async () => {
+        console.log(category)
+        const cat = await axios.get("http://localhost:4000/api/category/getid/" + category )
+        console.log(cat)
 
         const data = {
             name,
@@ -26,22 +24,24 @@ export default function FormPet() {
             color,
             description,
             breed,
+            category:cat.data.ans,
             imageLabel,
             owner,
             ownerEmail,
-            images
         }
         console.log(data)
+        console.log(images)
         setName("")
         setAge(0)
         setColor("")
         setDescription("")
         setBreed("")
+        setCategory("")
         setImageLabel("")
         setOwner("")
         setOwnerEmail("")
         setImages([])
-        const res = await axios.post("http://localhost:4000/api/pet/create" , data)
+        const res = await axios.post("http://localhost:4000/api/pets/create" , data)
     }
 
 
@@ -125,7 +125,7 @@ export default function FormPet() {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                         Image
                     </label>
-                    <input type="file" multiple accept="image/*" onChange={onImageChange} />
+                    <input type="file" multiple accept="image/*" onChange={(event) => setImages(event.target.files)} />
                 </div>
 
                 <div className="flex items-center justify-between">

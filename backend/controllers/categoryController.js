@@ -26,6 +26,22 @@ exports.create = async (req, res) => {
   }
 };
 
+exports.getid = async (req, res) => {
+  try {
+    const { name } = req.params;
+    console.log(name , req.params)
+    const created = await Category.findOne({name});
+    console.log(created._id)
+    const ans = created._id
+    console.log(ans)
+    res.json({ message: "Category successfuly got.",  ans});
+  } catch (error) {
+    console.log(error);
+    res.status(400).json(error);
+  }
+};
+
+
 exports.update = async (req, res) => {
   try {
     const { id } = req.params;

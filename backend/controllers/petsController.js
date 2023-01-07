@@ -41,17 +41,18 @@ exports.create = async (req, res) => {
   try {
     const { name, age, breed, color, description, imageLabel, category ,owner,ownerEmail} =
       req.body;
-    const { image, additionalImages } = req.files;
-
-    let imagePath = "";
-    let additionalImagesPaths = [];
-    if (req.files.image && req.files.image.length > 0) {
-      imagePath = image[0].path;
-    }
-
-    if (req.files.additionalImages && req.files.additionalImages.length > 0) {
-      additionalImagesPaths = additionalImages.map((file) => file.path);
-    }
+    console.log(req.body)
+    console.log(req.files)
+    // const { image, additionalImages } = req.files;
+    // let imagePath = "";
+    // let additionalImagesPaths = [];
+    // if (req.files.image && req.files.image.length > 0) {
+    //   imagePath = image[0].path;
+    // }
+    //
+    // if (req.files.additionalImages && req.files.additionalImages.length > 0) {
+    //   additionalImagesPaths = additionalImages.map((file) => file.path);
+    // }
 
     const createdPet = await Pet.create({
       name,
@@ -63,8 +64,8 @@ exports.create = async (req, res) => {
       category,
       owner,
       ownerEmail,
-      image: imagePath,
-      additionalImages: additionalImagesPaths,
+      // image: imagePath,
+      // additionalImages: additionalImagesPaths,
 
     });
 

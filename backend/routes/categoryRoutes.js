@@ -14,4 +14,6 @@ router.put("/update/:id", categoryController.update);
 
 router.delete("/delete/:id", categoryController.delete);
 
+router.get("/getid/:name" , categoryController.getid);
+
 module.exports = router;
