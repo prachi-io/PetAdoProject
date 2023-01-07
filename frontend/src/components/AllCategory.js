@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import NavCat from "./NavCat";
 import {Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 export default function AllCategory() {
 
     const [userData,setUserData] = useState("")
@@ -18,23 +19,26 @@ export default function AllCategory() {
     }, []);
     console.log(userData)
 
-    const [click1, setClick1] = useState(false);
-    const redirectToFormCategory = () => setClick1(false);
+    const navigate = useNavigate();
+    const createPost = (u) => {
+        navigate('/OneCategory',
+            {
+                state: {
+                    post_id: u,
+                }
+            });
+    }
 
 
     return(
         <> <NavCat/>
             {userData && userData.map((user) => (
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-auto m-20">
-                    <Link
-                        to='/OneCategory'
-                        className='nav-links'
-                        onClick={redirectToFormCategory}
-                    >
+                    <span onClick={() => { createPost(user._id) }}>
                         {user.name}
                         <br/>
                         {user._id}
-                    </Link>
+                    </span>
                 </button>
         ))}
         </>
