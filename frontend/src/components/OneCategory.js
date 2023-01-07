@@ -4,6 +4,7 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import NavAll from "./NavAll";
 
 export default function OneCategory() {
 
@@ -51,6 +52,7 @@ export default function OneCategory() {
 
     return (
         <>
+            <NavAll/>
             <h1>{reqname}</h1>
             {userData && userData.map((user) => (
 

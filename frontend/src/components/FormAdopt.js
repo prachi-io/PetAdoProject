@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import { useLocation,useNavigate } from 'react-router-dom';
+import NavAll from "./NavAll";
 export default function FormAdopt() {
 
     const [firstName, setFirstName] = useState('');
@@ -38,6 +39,7 @@ export default function FormAdopt() {
 
     return(
         <>
+            <NavAll/>
             <h1>{reqPetId}</h1>
             <div className="w-full max-w-xs m-auto ">
                 <h1>adopt form</h1>

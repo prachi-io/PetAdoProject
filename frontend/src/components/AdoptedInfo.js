@@ -1,6 +1,7 @@
 import React from "react";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import NavAll from "./NavAll";
 
 export default function AdoptedInfo() {
 
@@ -23,6 +24,7 @@ export default function AdoptedInfo() {
 
     return (
         <>
+            <NavAll/>
             {userData && userData.map((user) => (
                 <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto">
                     <div className="p-4">
