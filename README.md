@@ -50,9 +50,11 @@ npm start
 ### Home Page
 
 ![WhatsApp Image 2023-01-08 at 3 24 34 PM](https://user-images.githubusercontent.com/77448543/211191507-aa7fdb34-5126-4c46-af81-7bd95d1e22f2.jpeg)
-
-
-
+![WhatsApp Image 2023-01-08 at 3 26 49 PM](https://user-images.githubusercontent.com/77448543/211191549-cd4de2e3-94c0-4fb5-8889-877b0aa282e9.jpeg)
+![WhatsApp Image 2023-01-08 at 3 27 38 PM](https://user-images.githubusercontent.com/77448543/211191550-a6a2eb2b-4822-4019-93f1-c2284ff96bd8.jpeg)
+![WhatsApp Image 2023-01-08 at 3 28 22 PM](https://user-images.githubusercontent.com/77448543/211191552-c281454f-e653-41b1-ae54-44614f7aa9e2.jpeg)
+![WhatsApp Image 2023-01-08 at 3 25 45 PM](https://user-images.githubusercontent.com/77448543/211191554-609449d3-e32a-433f-96a4-a7c93dbd4a9e.jpeg)
+![WhatsApp Image 2023-01-08 at 3 26 13 PM](https://user-images.githubusercontent.com/77448543/211191555-5c366fa0-fac1-4702-b948-7d848c0f0969.jpeg)
 
 
 
