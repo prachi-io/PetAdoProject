@@ -49,6 +49,8 @@ npm start
 
 ### Home Page
 
+![WhatsApp Image 2023-01-08 at 3 24 34 PM](https://user-images.githubusercontent.com/77448543/211191507-aa7fdb34-5126-4c46-af81-7bd95d1e22f2.jpeg)
+
 
 
 
