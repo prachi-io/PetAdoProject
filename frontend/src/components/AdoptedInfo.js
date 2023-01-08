@@ -2,6 +2,7 @@ import React from "react";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import NavAll from "./NavAll";
+import Footer from "./Footer";
 
 export default function AdoptedInfo() {
 
@@ -34,6 +35,7 @@ export default function AdoptedInfo() {
                     </div>
                 </div>
             ))}
+            <Footer/>
         </>
     )
 }

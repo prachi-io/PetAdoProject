@@ -3,36 +3,26 @@ import {Text,Avatar,Image} from "react-ui";
 
 export default function ImagePart() {
     return(
-        <>
+        // <div className="h-full bg-[#FAAFBA]">
             <div id="main" className="mt-20 p-2 justify-around h-2000 m-auto w-10/12 flex
                               items-start
                               border-green-900 ">
                 <div >
-                    <img
-                        className="rounded-full"
-                    alt="sky full of stars"
-                    css={{ width: '30px' }}
-                    src="https://images.unsplash.com/photo-1434064511983-18c6dae20ed5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60"
-                    />
+                    <img className="rounded-[30px]" style={{ width: 950, height: 400 }} src="https://i.ytimg.com/vi/TUs-_KNr8qI/maxresdefault.jpg" alt="React Logo" />
                 </div>
                 <div className="bg-lime-100-700 rounded-lg py-8 w-100 m-10 ">
-                    <Text style={{fontWeight: 'bold',fontFamily: 'Myriad Pro Regular',fontSize : '30px'}}>
-                        <Text style={{color: 'black'}}>
-                            <p>If u want to help a animal , then adopt and give it a home</p>
+                    <Text style={{fontWeight: 'bold',fontFamily: 'Cursive',fontSize : '30px'}}>
+                        <Text style={{color: 'black' , letterSpacing : "0.01rem"}}>
+                            <p className="content-center">If u want to help an animal , then adopt and give it a home</p>
                         </Text>
                     </Text>
 
                 </div>
                 <div >
-                    <img
-                        className="rounded-full"
-                    alt="sky full of stars"
-                    css={{ width: '30px', }}
-                    src="https://images.unsplash.com/photo-1434064511983-18c6dae20ed5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=60"
-                    />
+                    <img className="rounded-[30px]" style={{ width: 900, height: 400 }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqnK7vPgm9LzMsQaT3BQM7epPfLOToEjD6OsfIs4PhQ4U-F40uAWHk1-lgO83JrIK9m-o&usqp=CAU" alt="React Logo" />
                 </div>
 
             </div>
-        </>
+        // </div>
     )
 }

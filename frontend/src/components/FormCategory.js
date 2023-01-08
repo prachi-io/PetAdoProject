@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import NavAll from "./NavAll";
+import Footer from "./Footer";
 
 
 export default function FormCategory() {
@@ -20,7 +21,8 @@ export default function FormCategory() {
         <>
             <NavAll/>
             <div className="w-full max-w-xs m-auto">
-                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+                <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-20" >
+                    <h2 className="mb-10 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM CATEGORY</h2>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                             Name
@@ -30,7 +32,7 @@ export default function FormCategory() {
                             id="name" type="text" placeholder="Name" value={name} onChange={(event)=> setName(event.target.value)}/>
                     </div>
 
-                    <div className="flex items-center justify-between">
+                    <div className="mt-10 flex items-center align-middle justify-between">
                         <button
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             type="button" onClick={submitData}>
@@ -39,6 +41,7 @@ export default function FormCategory() {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </>
 
     )

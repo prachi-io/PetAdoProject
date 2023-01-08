@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import { useLocation,useNavigate } from 'react-router-dom';
 import NavAll from "./NavAll";
+import Footer from "./Footer";
 export default function FormAdopt() {
 
     const [firstName, setFirstName] = useState('');
@@ -40,7 +41,7 @@ export default function FormAdopt() {
     return(
         <>
             <NavAll/>
-            <h1>{reqPetId}</h1>
+            {/*<h1>{reqPetId}</h1>*/}
             <div className="w-full max-w-xs m-auto ">
                 <h1>adopt form</h1>
                 <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -93,6 +94,7 @@ export default function FormAdopt() {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </>
 
     )
