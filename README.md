@@ -39,12 +39,14 @@ The following git command can be used to clone repository.
 
 $ git clone https://github.com/prachi-io/PetAdoProject.git
 
-* First of all install all the dependencies mentioned in the package.json file.
+* Open two terminals one for backend and one for frontend.
 * Then run the backend using:
-npm run start
+* cd backend
+* install all the dependencies mentioned in the package.json file.
+* npm run start
 * Then start the frontend using:
-npm install
-npm start
+* npm install
+* npm start
 
 ## Navigating Through The Website
 
