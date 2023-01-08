@@ -52,8 +52,8 @@ export default function FormPet() {
         <>
             <NavAll/>
             {/*tyle={{'backgroundColor' : 'pink'}}*/}
-            <div >
-                <div className="h-full w-full max-w-xs m-auto " >
+            <div className="bg-[#FFCBA5] pt-5 pb-2">
+                <div className="h-full w-full max-w-xs m-auto bg-[#FFCBA5] " >
                     <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitData}>
                         <h2 className="flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM PET</h2>
                         <div className="mb-4">
@@ -148,14 +148,14 @@ export default function FormPet() {
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-pink-500" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",
                 "color": "white",
                 "textAlign": "center"}}>
     <span className="text-sm  sm:text-center text-white-400">© 2023 <a href="https://flowbite.com/"
-                                                                       className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                                                                       className="hover:underline">PetAdo</a>. All Rights Reserved.
     </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm text-white-400 sm:mt-0">
                     <li>

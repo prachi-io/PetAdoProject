@@ -26,26 +26,29 @@ export default function AdoptedInfo() {
     return (
         <>
             <NavAll/>
-            {userData && userData.map((user) => (
-                <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto mt-5 mb-5 bg-blue-100">
-                    <div className="p-4">
-                        <h4 className="text-black-200 text-xl font-semibold tracking-tight ">
-                            {user.firstName + user.lastName}
-                        </h4>
+            <div className="bg-[#FFCBA5] pt-4 pb-2 mt-0">
+                {userData && userData.map((user) => (
+                    <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto mt-5 mb-5 bg-white">
+                        <div className="p-4">
+                            <h4 className="text-black-200 text-xl font-semibold tracking-tight ">
+                                {user.firstName +" "+ user.lastName}
+                            </h4>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-pink-500" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",
                 "color": "white",
                 "textAlign": "center"}}>
     <span className="text-sm  sm:text-center text-white-400">© 2023 <a href="https://flowbite.com/"
-                                                                       className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                                                                       className="hover:underline">PetAdo</a>. All Rights Reserved.
     </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm text-white-400 sm:mt-0">
                     <li>

@@ -3,10 +3,10 @@ import {Text,Avatar,Image} from "react-ui";
 
 export default function ImagePart() {
     return(
-        // <div className="h-full bg-[#FAAFBA]">
+        <div className=" pt-5 pb-16 mt-0 mb-0 bg-[#FFCBA5]">
             <div id="main" className="mt-20 p-2 justify-around h-2000 m-auto w-10/12 flex
                               items-start
-                              border-green-900 ">
+                              border-green-900">
                 <div >
                     <img className="rounded-[30px]" style={{ width: 950, height: 400 }} src="https://i.ytimg.com/vi/TUs-_KNr8qI/maxresdefault.jpg" alt="React Logo" />
                 </div>
@@ -23,6 +23,6 @@ export default function ImagePart() {
                 </div>
 
             </div>
-        // </div>
+        </div>
     )
 }

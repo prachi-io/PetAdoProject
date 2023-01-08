@@ -20,8 +20,9 @@ export default function FormCategory() {
     return(
         <>
             <NavAll/>
-            <div className="w-full max-w-xs m-auto">
-                <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-20" >
+            <div className="bg-[#FFCBA5] pt-5 pb-16 mt-0 mb-0">
+            <div className="w-full max-w-xs m-auto pb-16">
+                <form className="bg-blue-200 shadow-md rounded px-8 pt-16 pb-4 mb-4 mt-20" >
                     <h2 className="mb-10 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM CATEGORY</h2>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -40,6 +41,7 @@ export default function FormCategory() {
                         </button>
                     </div>
                 </form>
+            </div>
             </div>
             <Footer/>
         </>

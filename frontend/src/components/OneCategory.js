@@ -93,7 +93,7 @@ export default function OneCategory() {
         <>
             <>
                 {/*navbar */}
-                <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-pink-500 mb-3">
+                <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#800000] mb-3">
                     <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                         <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
                             <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="">
@@ -131,7 +131,7 @@ export default function OneCategory() {
                                     {/*        </span>*/}
                                     {/*</button>*/}
                                     <button
-                                        className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                                        className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
                                         <Link
                                             to='/'
                                             className='nav-links'
@@ -152,13 +152,14 @@ export default function OneCategory() {
             </>
             {/*main page*/}
             {/*<h1>{reqname}</h1>*/}
+            <div className="bg-[#FFCBA5] pt-5 pb-2">
             <h2 className="mb-5 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px','fontStyle' : 'Serif'}} >{reqname.toUpperCase()}</h2>
 
             {userData && userData.map((user) => (
 
-                <div className="w-full rounded-lg shadow-2xl lg:max-w-sm m-auto">
-                    <div className="p-4 mt-8">
-                        <h4 className="text-xl font-semibold tracking-tight text-blue-600">
+                <div className="bg-blue-200 w-full rounded-lg shadow-2xl lg:max-w-sm m-auto ">
+                    <div className="p-4 mt-8 mb-4">
+                        <h4 className="text-xl font-semibold tracking-tight text-red-600">
                             {"Name : " + user.name}
                         </h4>
                         <p className="mb-2 leading-normal">
@@ -188,32 +189,33 @@ export default function OneCategory() {
                 </div>
             ))}
             {/*<Footer/>*/}
+            </div>
 
-            <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-pink-500" style={{
-                "left": "0",
-                "bottom": "0",
-                "width": "100%",
-                "color": "white",
-                "textAlign": "center"}}>
-    <span className="text-sm  sm:text-center text-white-400">© 2023 <a href="https://flowbite.com/"
-                                                                       className="hover:underline">Flowbite™</a>. All Rights Reserved.
-    </span>
-                <ul className="flex flex-wrap items-center mt-3 text-sm text-white-400 sm:mt-0">
-                    <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>
-                    </li>
-                    <li>
-                        <a href="#" className=" text-white-400 mr-4 hover:underline md:mr-6">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" className=" text-white-400 mr-4 hover:underline md:mr-6">Licensing</a>
-                    </li>
-                    <li>
-                        <a href="#" className=" text-white-400 hover:underline">Contact</a>
-                    </li>
-                </ul>
-            </footer>
+    {/*        <footer*/}
+    {/*            className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{*/}
+    {/*            "left": "0",*/}
+    {/*            "bottom": "0",*/}
+    {/*            "width": "100%",*/}
+    {/*            "color": "white",*/}
+    {/*            "textAlign": "center"}}>*/}
+    {/*<span className="text-sm  sm:text-center text-white-400">© 2023 <a href="https://flowbite.com/"*/}
+    {/*                                                                   className="hover:underline">PetAdo</a>. All Rights Reserved.*/}
+    {/*</span>*/}
+    {/*            <ul className="flex flex-wrap items-center mt-3 text-sm text-white-400 sm:mt-0">*/}
+    {/*                <li>*/}
+    {/*                    <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>*/}
+    {/*                </li>*/}
+    {/*                <li>*/}
+    {/*                    <a href="#" className=" text-white-400 mr-4 hover:underline md:mr-6">Privacy Policy</a>*/}
+    {/*                </li>*/}
+    {/*                <li>*/}
+    {/*                    <a href="#" className=" text-white-400 mr-4 hover:underline md:mr-6">Licensing</a>*/}
+    {/*                </li>*/}
+    {/*                <li>*/}
+    {/*                    <a href="#" className=" text-white-400 hover:underline">Contact</a>*/}
+    {/*                </li>*/}
+    {/*            </ul>*/}
+    {/*        </footer>*/}
 
 
         </>

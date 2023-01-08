@@ -34,9 +34,9 @@ export default function AllCategory() {
     return(
         <> <NavCat/>
             {/*style={{'backgroundColor' : '#fcccd4'}}*/}
-            <div>
+            <div className="bg-[#FFCBA5] pt-5 pb-2">
                 {userData && userData.map((user) => (
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg m-auto m-20 ">
+                    <button className="bg-[#eb4d4d] hover:bg-[#b82323] text-white font-bold py-2 px-4 rounded-lg m-auto m-20 ">
                     <span className="p-10" onClick={() => { createPost(user.name) }}>
                         <p className="text-3xl">{user.name}</p>
                         <br/>
@@ -48,14 +48,14 @@ export default function AllCategory() {
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-pink-500" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",
                 "color": "white",
                 "textAlign": "center"}}>
     <span className="text-sm  sm:text-center text-white-400">© 2023 <a href="https://flowbite.com/"
-                                                                       className="hover:underline">Flowbite™</a>. All Rights Reserved.
+                                                                       className="hover:underline">PetAdo</a>. All Rights Reserved.
     </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm text-white-400 sm:mt-0">
                     <li>
