@@ -44,7 +44,7 @@ Open two terminals one for backend and one for frontend.
 
 Then run the backend using:
  ```
-cd backend
+cd ./backend
  ```
  ```
 install all the dependencies mentioned in the package.json file.
@@ -54,6 +54,9 @@ npm run start
  ```
  
 Then start the frontend using:
+ ```
+ cd ./frontend
+ ```
  ```
 npm install
  ```
