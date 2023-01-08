@@ -152,9 +152,11 @@ export default function OneCategory() {
             </>
             {/*main page*/}
             {/*<h1>{reqname}</h1>*/}
+            <h2 className="mb-5 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px','fontStyle' : 'Serif'}} >{reqname.toUpperCase()}</h2>
+
             {userData && userData.map((user) => (
 
-                <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto">
+                <div className="w-full rounded-lg shadow-2xl lg:max-w-sm m-auto">
                     <div className="p-4 mt-8">
                         <h4 className="text-xl font-semibold tracking-tight text-blue-600">
                             {"Name : " + user.name}

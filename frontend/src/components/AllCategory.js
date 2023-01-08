@@ -36,7 +36,7 @@ export default function AllCategory() {
             {/*style={{'backgroundColor' : '#fcccd4'}}*/}
             <div>
                 {userData && userData.map((user) => (
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-auto m-20 ">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg m-auto m-20 ">
                     <span className="p-10" onClick={() => { createPost(user.name) }}>
                         <p className="text-3xl">{user.name}</p>
                         <br/>

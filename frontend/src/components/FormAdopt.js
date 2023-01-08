@@ -43,7 +43,7 @@ export default function FormAdopt() {
             <NavAll/>
             {/*<h1>{reqPetId}</h1>*/}
             <div className="w-full max-w-xs m-auto ">
-                <form className="mt-5 bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <form className="mt-5   bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <h2 className="mb-10 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM ADOPT</h2>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
