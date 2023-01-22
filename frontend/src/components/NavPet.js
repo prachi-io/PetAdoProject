@@ -106,13 +106,16 @@ export default function NavPet() {
                                 </button>
                                 <button
                                     className="bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                    <Link
-                                        to='/'
-                                        className='nav-links'
-                                        onClick={redirectToHome}
-                                    >
-                                        Home
+                                    <Link className="nav-item nav-link dropdown custom" to="/">
+                                        Homeuuu
                                     </Link>
+                                    {/*<Link*/}
+                                    {/*    to='/'*/}
+                                    {/*    className='nav-links'*/}
+                                    {/*    onClick={redirectToHome}*/}
+                                    {/*>*/}
+                                    {/*    Home*/}
+                                    {/*</Link>*/}
                                 </button>
                                 {/*</a>*/}
                             </li>

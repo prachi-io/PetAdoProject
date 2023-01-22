@@ -30,12 +30,8 @@ export default function NavAll() {
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
                                     <button
                                         className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
-                                        <Link
-                                            to='/'
-                                            className='nav-links'
-                                            onClick={redirectToHome}
-                                        >
-                                            Home
+                                        <Link className="nav-item nav-link dropdown custom" to="/">
+                                            Homeuuu
                                         </Link>
                                     </button>
                                 </a>
