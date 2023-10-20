@@ -10,6 +10,7 @@ export default function FormAdopt() {
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
+    const navigate = useNavigate();
 
     const { state } = useLocation();
     console.log(state)
@@ -32,7 +33,10 @@ export default function FormAdopt() {
         setAddress("")
         setPhone("")
         const res = await axios.post("http://localhost:4000/api/adoption/create" , data)
-        const r = await axios.delete("http://localhost:4000/api/pets/delete/" + reqPetId)
+        const r = await axios.put("http://localhost:4000/api/pets/updateStatus/" + reqPetId)
+        console.log("update hogya status")
+        // const r = await axios.delete("http://localhost:4000/api/pets/delete/" + reqPetId)
+        navigate('/');
     }
 
 
@@ -42,7 +46,7 @@ export default function FormAdopt() {
         <>
             <NavAll/>
             {/*<h1>{reqPetId}</h1>*/}
-            <div className="bg-[#FFCBA5] pt-5 pb-2">
+            <div className="bg-[#B8E3FF] pt-5 pb-2">
             <div className="w-full max-w-xs m-auto ">
                 <form className="mt-5   bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <h2 className="mb-10 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM ADOPT</h2>
@@ -99,7 +103,7 @@ export default function FormAdopt() {
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#03254C]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",

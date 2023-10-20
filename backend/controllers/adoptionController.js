@@ -3,14 +3,49 @@ const Pet = require("../models/Pet");
 
 exports.getAll = async (req, res) => {
   try {
+    // Fetch all adoptions
     const adoptions = await Adoption.find();
 
-    res.json(adoptions);
+    // Create an array to store the updated adoptions
+    const updatedAdoptions = [];
+
+    // Loop through each adoption and retrieve pet information
+    for (let i = 0; i < adoptions.length; i++) {
+      const petId = adoptions[i].pet; // Assuming 'pet' is the field in Adoption containing the pet ID
+
+      // Make a request to the 'getOne' route for the specific pet ID
+      const petInfo = await fetchPetInfo(petId);
+
+      // Create a new adoption object with the pet information
+      const updatedAdoption = { ...adoptions[i]._doc, petInfo };
+      updatedAdoptions.push(updatedAdoption);
+    }
+
+    // Return the updated adoptions list
+    res.json(updatedAdoptions);
   } catch (error) {
     console.log(error);
     res.status(400).json(error);
   }
 };
+
+// Helper function to fetch pet information using the 'getOne' route
+async function fetchPetInfo(petId) {
+  try {
+    // Make a request to the 'getOne' route for the pet ID
+    const pet = await Pet.findById(petId).populate('category');
+    return pet;
+  } catch (error) {
+    console.log(`Error fetching pet info for ID ${petId}: ${error}`);
+    return null; // You can handle errors as needed
+  }
+}
+
+
+
+
+
+
 
 exports.getOne = async (req, res) => {
   const { id } = req.params;

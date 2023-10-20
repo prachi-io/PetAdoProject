@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import axios from "axios";
 import NavAll from "./NavAll";
 import Footer from "./Footer";
 export default function FormPet() {
-
+    const [categories, setCategories] = useState([]);
     const [images, setImages] = useState([]);
     const [name, setName] = useState('');
     const [age, setAge] = useState(0);
@@ -14,6 +14,21 @@ export default function FormPet() {
     const [imageLabel, setImageLabel] = useState('');
     const [owner, setOwner] = useState('');
     const [ownerEmail, setOwnerEmail] = useState('');
+
+    // Fetch categories when the component mounts
+    useEffect(() => {
+        async function fetchCategories() {
+            try {
+                const response = await axios.get("http://localhost:4000/api/category/all");
+                // console.log("response : " ,response)
+                // console.log("response.data : "  , response.data)
+                setCategories(response.data);
+            } catch (error) {
+                console.error("Error fetching categories:", error);
+            }
+        }
+        fetchCategories();
+    }, []);
 
     const submitData = async () => {
         console.log(category)
@@ -44,6 +59,7 @@ export default function FormPet() {
         setOwnerEmail("")
         setImages([])
         const res = await axios.post("http://localhost:4000/api/pets/create" , data)
+
     }
 
 
@@ -52,7 +68,7 @@ export default function FormPet() {
         <>
             <NavAll/>
             {/*tyle={{'backgroundColor' : 'pink'}}*/}
-            <div className="bg-[#FFCBA5] pt-5 pb-2">
+            <div className="bg-[#B8E3FF] pt-5 pb-2">
                 <div className="h-full w-full max-w-xs m-auto bg-[#FFCBA5] " >
                     <form className="bg-blue-200 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitData}>
                         <h2 className="flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px'}} >FORM PET</h2>
@@ -105,12 +121,22 @@ export default function FormPet() {
                                 id="imageLabel" type="text" placeholder="Image Label" value={imageLabel} onChange={(event)=> setImageLabel(event.target.value)}/>
                         </div>
                         <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="category">
                                 Category
                             </label>
-                            <input
+                            <select
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="category" type="text" placeholder="Category" value={category} onChange={(event)=> setCategory(event.target.value)}/>
+                                id="category"
+                                value={category}
+                                onChange={(event) => setCategory(event.target.value)}
+                            >
+                                <option value="">Select a Category</option>
+                                {categories.map((cat) => (
+                                    <option key={cat._id} value={cat._id}>
+                                        {cat.name}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
@@ -148,7 +174,7 @@ export default function FormPet() {
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#03254C]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",

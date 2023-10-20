@@ -3,7 +3,7 @@ import {Text,Avatar,Image} from "react-ui";
 
 export default function ImagePart() {
     return(
-        <div className=" pt-5 pb-16 mt-0 mb-0 bg-[#FFCBA5]">
+        <div className=" pt-5 pb-16 mt-0 mb-0 bg-[#B8E3FF]">
             <div id="main" className="mt-20 p-2 justify-around h-2000 m-auto w-10/12 flex
                               items-start
                               border-green-900">
@@ -12,8 +12,8 @@ export default function ImagePart() {
                 </div>
                 <div className="bg-lime-100-700 rounded-lg py-8 w-100 m-10 ">
                     <Text style={{fontWeight: 'bold',fontFamily: 'Cursive',fontSize : '30px'}}>
-                        <Text style={{color: 'black' , letterSpacing : "0.01rem"}}>
-                            <p className="content-center">If u want to help an animal , then adopt and give it a home</p>
+                        <Text style={{color: 'black' , letterSpacing : "0.02rem"}}>
+                            <p className="content-center">Find your fur-ever friend today. Unleash love and adopt a pet.</p>
                         </Text>
                     </Text>
 

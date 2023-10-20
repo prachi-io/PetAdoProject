@@ -77,4 +77,6 @@ router.put(
 
 router.delete("/delete/:id", petController.delete);
 
+router.put("/updateStatus/:id" , petController.updateStatus);
+
 module.exports = router;

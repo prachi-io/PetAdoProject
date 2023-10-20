@@ -6,7 +6,7 @@ export default function Footer() {
             {/*hey i am footer*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{"position": "fixed",
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#03254C]" style={{"position": "fixed",
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",

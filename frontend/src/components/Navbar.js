@@ -20,14 +20,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#800000]">
+            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#2A91ED]">
                 <div className="container px-0 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex  justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
                         {/*<ThemeProvider tokens={tokens} components={components}>*/}
                         {/*    <Avatar size="medium" src="https://content.jdmagicbox.com/comp/mumbai/r8/022pxx22.xx22.170119124215.z8r8/catalogue/krupa-pets-kennel-borivali-east-mumbai-pet-shops-for-dog-n10087wxm2.jpg?clr=" />*/}
                         {/*</ThemeProvider>*/}
 
-                        <img className="rounded-[100px]" style={{ width: 50, height: 40 }} src="https://content.jdmagicbox.com/comp/mumbai/r8/022pxx22.xx22.170119124215.z8r8/catalogue/krupa-pets-kennel-borivali-east-mumbai-pet-shops-for-dog-n10087wxm2.jpg?clr=" alt="React Logo" />
+                        {/*<img className="rounded-[100px]" style={{ width: 50, height: 40 }} src="https://content.jdmagicbox.com/comp/mumbai/r8/022pxx22.xx22.170119124215.z8r8/catalogue/krupa-pets-kennel-borivali-east-mumbai-pet-shops-for-dog-n10087wxm2.jpg?clr=" alt="React Logo" />*/}
 
                         <h2 className="font-bold text-2xl" style={{'color' : 'white'}}>
                             PetAdo
@@ -44,11 +44,10 @@ export default function Navbar() {
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
 
                                     <button
-                                        className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
+                                        className="bg-white text-sm hover:bg-[#03254C] text-[#03254C] font-bold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded">
                                         <Link
                                             to='/AdoptedInfo'
                                             className='nav-links'
-                                            onClick={redirectToAdoptedInfo}
                                         >
                                             Past Adoptors
                                         </Link>
@@ -59,11 +58,10 @@ export default function Navbar() {
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
 
                                     <button
-                                        className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
+                                        className="bg-white text-sm hover:bg-[#03254C] text-[#03254C] font-bold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded">
                                         <Link
                                             to='/FormPet'
                                             className='nav-links'
-                                            onClick={redirectToFormPet}
                                         >
                                             Add a pet
                                         </Link>
@@ -73,11 +71,10 @@ export default function Navbar() {
                             <li className="nav-item">
                                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="">
                                     <button
-                                        className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
+                                        className="bg-white text-sm hover:bg-[#03254C] text-[#03254C] font-bold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded">
                                         <Link
                                             to='/AllCategory'
                                             className='nav-links'
-                                            onClick={redirectToAllCategory}
                                         >
                                             Adopt a pet
                                         </Link>

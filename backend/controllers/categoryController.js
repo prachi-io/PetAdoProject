@@ -1,9 +1,11 @@
 const Category = require("../models/Category");
+const Pet = require('../models/Pet');
 
 exports.getAll = async (req, res) => {
+  console.log("get karo all")
   try {
     const categories = await Category.find();
-
+    // console.log("Categories : " , categories)
     res.json(categories);
   } catch (error) {
     console.log(error);

@@ -50,7 +50,7 @@ export default function OneCategory() {
     const filterItem = (reqname) => {
         const newItem = []
         for(let i = 0 ; i < userData.length ; i++) {
-            if(userData[i].category.name === reqname) {
+            if(userData[i].category.name === reqname && userData[i].adoptionStatus === "open") {
                 newItem.push(userData[i])
             }
         }
@@ -93,14 +93,12 @@ export default function OneCategory() {
         <>
             <>
                 {/*navbar */}
-                <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#800000] mb-3">
+                <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#2A91ED] mb-3">
                     <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                         <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-                            <a className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white" href="">
-                                <ThemeProvider tokens={tokens} components={components}>
-                                    <Avatar size="medium" src="https://github.com/sameen-shi.png" />
-                                </ThemeProvider>
-                            </a>
+                            <h2 className="font-bold text-2xl" style={{'color' : 'white'}}>
+                                PetAdo
+                            </h2>
                             {/*<button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">*/}
                             {/*    <span className="block relative w-6 h-px rounded-sm bg-white"></span>*/}
                             {/*    <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>*/}
@@ -131,7 +129,7 @@ export default function OneCategory() {
                                     {/*        </span>*/}
                                     {/*</button>*/}
                                     <button
-                                        className="bg-white text-sm hover:bg-[#b8f272] text-[#964B00] font-bold hover:text-black py-3 px-5 border border-blue-500 hover:border-transparent rounded">
+                                        className="bg-white text-sm hover:bg-[#03254C] text-[#03254C] font-bold hover:text-white py-3 px-5 border border-blue-500 hover:border-transparent rounded">
                                         <Link
                                             to='/'
                                             className='nav-links'
@@ -152,7 +150,7 @@ export default function OneCategory() {
             </>
             {/*main page*/}
             {/*<h1>{reqname}</h1>*/}
-            <div className="bg-[#FFCBA5] pt-5 pb-2">
+            <div className="bg-[#B8E3FF] pt-5 pb-2">
             <h2 className="mb-5 flex align-middle align-center justify-center" style={{'fontWeight' : 'bold' , 'fontSize' : '25px','fontStyle' : 'Serif'}} >{reqname.toUpperCase()}</h2>
 
             {userData && userData.map((user) => (

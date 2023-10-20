@@ -26,13 +26,25 @@ export default function AdoptedInfo() {
     return (
         <>
             <NavAll/>
-            <div className="bg-[#FFCBA5] pt-4 pb-2 mt-0">
+            <div className="bg-[#B8E3FF] pt-4 pb-2 mt-0">
                 {userData && userData.map((user) => (
                     <div className="w-full rounded-lg shadow-md lg:max-w-sm m-auto mt-5 mb-5 bg-white">
                         <div className="p-4">
                             <h4 className="text-black-200 text-xl font-semibold tracking-tight ">
                                 {user.firstName +" "+ user.lastName}
                             </h4>
+                            <h5 className="text-black-100 text-xl font-semibold tracking-tight ">
+                                {user.petInfo.name}
+                            </h5>
+                            <h6 className="text-black-100 text-xl font-semibold tracking-tight ">
+                                {user.petInfo.age}
+                            </h6>
+                            <h6 className="text-black-100 text-xl font-semibold tracking-tight ">
+                                {user.petInfo.description}
+                            </h6>
+                            <h5 className="text-black-100 text-xl font-semibold tracking-tight ">
+                                {user.petInfo.breed}
+                            </h5>
                         </div>
                     </div>
                 ))}
@@ -41,7 +53,7 @@ export default function AdoptedInfo() {
             {/*<Footer/>*/}
 
             <footer
-                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#800000]" style={{
+                className="mb-0 p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-[#03254C]" style={{
                 "left": "0",
                 "bottom": "0",
                 "width": "100%",

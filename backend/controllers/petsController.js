@@ -28,7 +28,7 @@ exports.getOne = async (req, res) => {
 exports.getByCategory = async (req, res) => {
   const { categoryId } = req.params;
   try {
-    const pets = await Pet.find({ category: categoryId }).populate("category");
+    const pets = await Pet.find({ category: categoryId,adoptionStatus:"open" }).populate("category");
 
     res.json(pets);
   } catch (error) {
@@ -170,4 +170,20 @@ exports.delete = async (req, res) => {
     res.status(400).json(error);
   }
 };
+
+exports.updateStatus = async (req,res) => {
+  const {id} = req.params;
+  console.log("id of pet : " , id )
+  try {
+    const pet = await Pet.findByIdAndUpdate({'_id' :id},{$set:{
+        adoptionStatus:"close",
+      }},{ returnOriginal: false })
+    console.log("updated pet : " , pet )
+
+  }
+  catch (error) {
+    console.log(error);
+    res.status(400).json(error);
+  }
+}
 
